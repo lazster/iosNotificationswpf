@@ -1,0 +1,46 @@
+﻿<Application x:Class="CustomListBox.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+
+        <!-- ButtonBackVanish Styling Starts here-->
+
+        <Style x:Key="ButtonBackVanish" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#1F4E79" />
+                    <Setter Property="Button.Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="Black" Direction="320" ShadowDepth="3" BlurRadius="5" Opacity="0.5" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+
+                <!--<Trigger Property="IsMouseOver" Value="True">
+
+                </Trigger>-->
+
+
+            </Style.Triggers>
+
+        </Style>
+
+        <!-- ButtonBackVanish Styling Ends here-->
+
+
+
+    </Application.Resources>
+</Application>
